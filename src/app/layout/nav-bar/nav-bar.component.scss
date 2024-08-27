@@ -1,0 +1,69 @@
+// Variables
+$background-dark: #1b2431;
+$text-light: #ffffff;
+$text-secondary: #cbd1dc;
+$hover-background: #2c3646;
+$box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+// Estilos generales
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $background-dark;
+  color: $text-light;
+}
+
+nav {
+  background-color: $background-dark;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: $box-shadow;
+
+  .logo h3 {
+    color: $text-light;
+    font-size: 24px;
+    margin: 0;
+    padding-top: 6px;
+  }
+
+  .tab-menu {
+    display: flex;
+    gap: 15px;
+
+    a {
+      color: $text-secondary;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $hover-background;
+        color: $text-light;
+      }
+    }
+  }
+}
+
+// Media queries para dispositivos móviles
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tab-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+
+    a {
+      width: 100%;
+      text-align: left;
+    }
+  }
+}
